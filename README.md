@@ -1,87 +1,27 @@
-# Data — Satellite-Based Orchard Stress Mapping Challenge
+# SpectralCV — Satellite-Based Orchard Stress Mapping
+F3i Innovate Data Challenge #2 | Team: SpectralCV | May 2026
 
-This folder contains geospatial boundary files for orchard sites used in the F3 Innovate Data Challenge: **Satellite-Based Orchard Stress Mapping**.
+## Overview
+SpectralCV detects persistent stress zones in Central Valley orchards 
+using 6 years of Sentinel-2 satellite imagery (2019-2024) across 6 sites.
 
-Unlike traditional challenges, no single precompiled dataset is provided. Participants are expected to build pipelines to access, process, and analyze satellite imagery directly.
+## How to Run
+1. Open SpectralCV_pipeline.ipynb in NDP JupyterHub
+2. Run Section 0 (Install + Imports + Config)
+3. Run sections in order: 1 → 2 → 3 → 6 → 8
+4. Outputs save automatically to outputs/stress_maps/ and outputs/time_series/
 
----
+## Requirements
+See requirements.txt. Install with: pip install -r requirements.txt
 
-## Folder Structure
+## Sites
+Fresno, Kings, Kern, Stanislaus, Tulare, Partner (HMC Farms)
 
-## Site Data
+## Key Results
+- Fresno: 9.8% high stress, 20.3% mild, 69.8% healthy
+- Kings: 7.0% high stress, 24.1% mild, 68.9% healthy  
+- Partner (HMC Farms): 8.9% high stress, 27.6% mild, 63.6% healthy
+- All sites show 2022 drought signal (40%+ NDVI decline from 2019 baseline)
 
-Each `.geojson` file defines a **region of interest (ROI)** corresponding to an orchard site in California’s Central Valley.
-
-### Public Sites
-- Represent typical orchard regions across different geographies and crop types
-- Intended for method development, testing, and benchmarking
-
-### Partner Site
-- `partner_site_1.geojson`
-- Represents a real-world orchard boundary provided in collaboration with an industry partner
-- May include greater complexity (e.g., mixed varieties, smaller blocks, irregular structure)
-- Intended as a realistic test case for applying your pipeline
-
----
-
-## Data Access
-
-Participants will use these site boundaries to query satellite imagery, primarily:
-
-- **Sentinel-2 multispectral imagery**
-
-From this imagery, participants are expected to derive vegetation indices such as:
-
-- NDVI (Normalized Difference Vegetation Index)
-- NDMI (Moisture Index)
-- NDRE (Red-edge Index)
-- EVI (Enhanced Vegetation Index)
-
----
-
-## Recommended Workflow
-
-A typical workflow includes:
-
-1. Load a site boundary (`.geojson`)
-2. Extract the bounding box (ROI)
-3. Query Sentinel-2 imagery for that region
-4. Apply cloud masking and filtering
-5. Compute vegetation indices
-6. Aggregate multi-season time series
-7. Analyze spatial variability
-8. Generate maps and insights
-
----
-
-## Data Guidelines
-
-- All analysis must use **open-source or publicly accessible datasets**
-- Pipelines must be **fully reproducible**
-- Participants are encouraged to test across **multiple sites**
-- The partner site should be included as part of your analysis
-
----
-
-## Usage Notes
-
-- Site boundaries are provided for **research and educational use within this challenge only**
-- Do not redistribute these files outside the context of the challenge
-- Results should be interpreted as **relative spatial variability**, not definitive diagnosis of field conditions
-
----
-
-## Coordinate System
-
-All GeoJSON files are provided in:
-
-- `EPSG:4326` (WGS84 latitude / longitude)
-
----
-
-## Contact
-
-For questions related to the data or challenge setup:
-
-**Ryan Dinubilo**  
-F3 Innovate
+## Platform
+National Data Platform (NDP) JupyterHub
