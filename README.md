@@ -1,6 +1,6 @@
 # SpectralCV — Satellite-Based Orchard Stress Mapping
 F3i Innovate Data Challenge #2 | Team: SpectralCV | May 2026
-Contributors: Eric Pineda Ramirez, Rondo
+Contributors: Eric Pineda Ramirez, Ronnie Pabelonio
 
 ## Overview
 SpectralCV detects persistent stress zones in Central Valley orchards
