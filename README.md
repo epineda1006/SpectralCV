@@ -12,7 +12,7 @@ using 6 years of Sentinel-2 satellite imagery (2019-2024) across 6 sites.
 - `SpectralCV_pipeline.ipynb` — Full end-to-end pipeline covering Fresno,
   Kings, and Partner (HMC Farms) sites. Start here.
 
-### Site-Specific Notebooks (Rondo)
+### Site-Specific Notebooks (Ronnie)
 Located in the `notebooks/` folder:
 - `notebooks/SpectralCV_Kern.ipynb` — Kern County site analysis
 - `notebooks/SpectralCV_Stanislaus.ipynb` — Stanislaus County site analysis
